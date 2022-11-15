@@ -1,0 +1,16 @@
+.vscode
+*.yaml
+*.log
+log
+tmp
+.idea
+*.out
+*.o
+Data
+judged
+test
+*.rdb
+push.sh
+test.go
+*.log
+image
