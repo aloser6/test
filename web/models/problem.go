@@ -114,8 +114,7 @@ func GetNextProblemPID(ctx context.Context) (string, error) {
 	return fmt.Sprintf("%v", PID+1), nil
 }
 
-// 解析json
-func ParseJsonToDB(ctx context.Context, fileText string) error {
+func ParseJsonToDB(ctx context.Context, fileText string) error {// 解析json
 	jsonData := []byte(fileText)
 	var problems dao.Problem
 	err := json.Unmarshal(jsonData, &problems)
@@ -127,8 +126,7 @@ func ParseJsonToDB(ctx context.Context, fileText string) error {
 	return err
 }
 
-// 生成json
-func ParseDBToJson(ctx context.Context, PID string) error {
+func ParseDBToJson(ctx context.Context, PID string) error {//生成json
 	problems, err := GetProblemByPID(ctx, PID)
 	if err != nil {
 		logger.Errorf("call ParseDBToJson failed, err:%v", err.Error())
